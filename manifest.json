@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "WalletGuard",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/gp/cart/view.html*"
+      ],
+      "js": ["jquery-2.2.0.min.js", "content.js"],
+      "css": ["style.css"]
+    }
+  ],
+
+  "permissions": [
+     "https://*.plaid.com/"
+   ],
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}

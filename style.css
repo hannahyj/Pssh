@@ -1,0 +1,9 @@
+.summary-box{
+  font-size: large;
+  margin: 10px 0;
+}
+
+.amount{
+  font-weight: 400;
+  text-align: right;
+}
