@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Authenticate with Plaid</title>
+    <style>
+        body {
+            width: 400px;
+            height: 600px;
+        }
+        #plaid-link-button {
+          border: 10px solid pink;
+        }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <form id="plaid-link-button" method="POST" action="/authenticate.html"></form>
+    <script
+    src="link-initialize.js"
+    data-client-name="Client Name"
+    data-form-id="plaid-link-button"
+    data-key="test_key"
+    data-product="auth"
+    data-env="tartan">
+    </script>
+  </body>
+</html>
