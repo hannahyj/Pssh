@@ -7,16 +7,17 @@ var request = {
 };
 
 function createFutureBalanceObject(balance, subtotal) {
-  var table = $('<table></table>').addClass('summary-box');
+  var table = $('<table></table>').addClass('summary-box bordered');
   var initialBalance = $('<tr></tr>').append(
-    "<td>Initial Balance: </td><td class='.amount'>" + balance + "</td>"
+    "<td>Initial Balance: </td><td class='amount'>$" + balance + "</td>"
   );
   initialBalance.addClass()
   table.append(initialBalance);
 
   var newBalance = balance - subtotal;
   var afterBalance = $('<tr></tr>').append(
-    "<td>After Purchase: </td><td class='.amount'>" + newBalance +"</td>"
+    "<td>End Balance: </td><td class='amount special-amount-color'>$"
+    + newBalance +"</td>"
   );
   table.append(afterBalance);
   return table;
